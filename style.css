@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/sansation');
+
+:root {
+    --color-cian: #08A3A5;
+    --color-amarillo: #F7AE45;
+    --color-gris-claro: #D5DCE2;
+    --color-gris-tarjetas: #2F3334;
+    --color-texto: #2F3334;
+    --color-blanco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sansation', 'Space Mono', sans-serif;
+    color: var(--color-texto);
+    background-color: var(--color-gris-claro);
+    line-height: 1.4;
+}
+
+/* Contenedor Principal en Grid (60% / 40%) */
+main {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+/* Columna Izquierda (60%) */
+.columna-izquierda {
+    background-color: var(--color-gris-claro);
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Header & Marca */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    letter-spacing: -0.5px;
+}
+
+/* Hero Content */
+.hero-content {
+    margin-top: 10px;
+    max-width: 90%;
+}
+
+.hero-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 2.3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-texto);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #4a5053;
+    margin-bottom: 28px;
+    font-weight: 400;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--color-cian);
+    color: var(--color-blanco);
+    font-family: 'Space Mono', monospace;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 14px 45px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(8, 163, 165, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: #068789;
+    transform: translateY(-2px);
+}
+
+/* Sección Servicios */
+.servicios-container {
+    background-color: var(--color-blanco);
+    border-radius: 12px;
+    padding: 24px 28px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.servicios-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.card-servicio {
+    border: 1px solid #e1e7ed;
+    border-radius: 8px;
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--color-blanco);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-servicio:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.icon-wrapper {
+    width: 38px;
+    height: 38px;
+}
+
+.icon-wrapper svg {
+    width: 100%;
+    height: 100%;
+}
+
+.card-servicio h3 {
+    font-family: 'Sansation', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    line-height: 1.25;
+}
+
+.card-servicio p {
+    font-size: 0.78rem;
+    color: #61686c;
+    line-height: 1.35;
+}
+
+/* Columna Derecha (40%) */
+.columna-derecha {
+    background-color: var(--color-blanco);
+    padding: 40px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.section-title-right {
+    font-family: 'Space Mono', monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.cards-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-info {
+    background-color: #E2E7EC;
+    border-radius: 12px;
+    padding: 20px 22px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.card-info-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 65px;
+}
+
+.percentage {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.info-icon {
+    width: 44px;
+    height: 44px;
+}
+
+.info-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.card-info-right h4 {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+}
+
+.card-info-right p {
+    font-size: 0.82rem;
+    color: #4f5558;
+    line-height: 1.4;
+}
+
+/* Call to Action Derecha con Animación Suave de Color */
+.cta-section {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.cta-text {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* Animación de intercalado de color suave entre cian y amarillo #F7AE45 */
+@keyframes intercalarColor {
+    0% {
+        color: var(--color-cian);
+        text-shadow: 0 0 2px rgba(8, 163, 165, 0.4);
+    }
+    50% {
+        color: var(--color-amarillo);
+        text-shadow: 0 0 8px rgba(247, 174, 69, 0.6);
+    }
+    100% {
+        color: var(--color-cian);
+        text-shadow: 0 0 2px rgba(8, 163, 165, 0.4);
+    }
+}
+
+.btn-secondary {
+    display: inline-block;
+    font-family: 'Space Mono', monospace;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+    animation: intercalarColor 3s ease-in-out infinite;
+    transition: transform 0.2s ease;
+    padding: 4px 12px;
+}
+
+.btn-secondary:hover {
+    transform: scale(1.08);
+}
+
+/* -------------------------------------------------------------
+   DISEÑO RESPONSIVO (Adaptable a PC, Tablet y Móvil)
+   ------------------------------------------------------------- */
+
+/* Pantallas Medianas / Laptops / Tablets grandes (<= 1024px) */
+@media (max-width: 1024px) {
+    .columna-izquierda {
+        padding: 30px;
+    }
+    .columna-derecha {
+        padding: 30px;
+    }
+    .hero-title {
+        font-size: 1.9rem;
+    }
+    .servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets (<= 850px): Cambia a diseño en una sola columna vertical */
+@media (max-width: 850px) {
+    main {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .columna-izquierda, .columna-derecha {
+        padding: 30px 24px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 1.7rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Dispositivos Móviles (<= 576px) */
+@media (max-width: 576px) {
+    .columna-izquierda, .columna-derecha {
+        padding: 24px 16px;
+    }
+
+    .brand-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 1.4rem;
+        letter-spacing: 0;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 12px 20px;
+    }
+
+    .servicios-container {
+        padding: 16px;
+    }
+
+    .servicios-title {
+        font-size: 1.5rem;
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title-right {
+        font-size: 1.5rem;
+    }
+
+    .card-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .cta-text {
+        font-size: 1.1rem;
+    }
+
+    .btn-secondary {
+        font-size: 1.3rem;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* -------------------------------------------------------------
+   Efectos de Hover 3D y Elevación Mejorados
+   ------------------------------------------------------------- */
+.card-servicio, .card-info {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card-servicio:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(8, 163, 165, 0.18);
+    border-color: var(--color-cian);
+}
+
+.card-info:hover {
+    transform: translateY(-4px) scale(1.015);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+    background-color: #D3DBE2;
+}
+
+/* -------------------------------------------------------------
+   Sección de Preguntas Frecuentes (FAQ)
+   ------------------------------------------------------------- */
+.faq-container {
+    background-color: var(--color-blanco);
+    border-radius: 12px;
+    padding: 24px 28px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.faq-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--color-texto);
+}
+
+.faq-item {
+    border-bottom: 1px solid #e1e7ed;
+    padding: 12px 0;
+    cursor: pointer;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    font-family: 'Sansation', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    outline: none;
+    user-select: none;
+    transition: color 0.2s ease;
+}
+
+.faq-item[open] .faq-question, .faq-question:hover {
+    color: var(--color-cian);
+}
+
+.faq-answer {
+    margin-top: 8px;
+    font-size: 0.88rem;
+    color: #555c60;
+    line-height: 1.45;
+}
+
+/* -------------------------------------------------------------
+   Botón Flotante Permanente de WhatsApp
+   ------------------------------------------------------------- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 58px;
+    height: 58px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.45);
+    z-index: 999;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.12);
+    box-shadow: 0 6px 22px rgba(37, 211, 102, 0.65);
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+}
+
